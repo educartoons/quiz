@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import Alternative, {AlternativesContainer} from './Alternative'
 import Stepper from './Stepper';
 
@@ -10,6 +10,10 @@ export default function Question(props){
   const handleClick = (idx) => {
     setMarked(idx);
   }
+
+  useEffect(()=>{
+    setMarked(-1)
+  }, [question])
 
   return <>
     <h2>{question}</h2>
