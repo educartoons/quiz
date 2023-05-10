@@ -13,7 +13,7 @@ export default function Question(props){
 
   useEffect(()=>{
     setMarked(-1)
-  }, [question])
+  }, [position])
 
   return <>
     <h2>{question}</h2>
